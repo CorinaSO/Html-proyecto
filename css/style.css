@@ -1,0 +1,124 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+body{
+    background-color: rgb(98, 70, 70);
+}
+/* Menú bar */
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: black;
+}
+@media (max-width:329px){
+    li{
+        display: none;
+    }
+    .reponsive{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width:330px){
+    .movil{
+        display: none;
+    }
+    
+    li{
+        float: right;
+    }
+    
+    .left{
+        display: none;
+    }
+    
+    @media (min-width:445px){
+        .left {
+            display: list-item;
+            float: left;
+            text-transform: uppercase;
+        }
+    }
+    
+    li a{
+        display:block;
+        color:white;
+        padding:14px 16px;
+        text-align: center;
+        text-decoration: none;
+    }
+    li a:hover{
+        background-color: #ccc;
+        color:black;
+    }
+    .left a{
+        color:orange;
+    }
+    
+}
+
+/* Sección de contenido dentro de un grid */
+.gridContenido{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@media (min-width:1200px){
+    .gridContenido{
+        grid-template-columns: 1fr 3fr;
+    }
+}
+.imagen{
+    align-self: center;
+    display: inline-flex;
+    justify-content: center;
+}
+.imagen img{
+    margin:5px;
+    border-radius: 50%;
+}
+.presentacion {
+    text-align: justify;
+    margin:5px;
+    padding: 5px;
+    color: whitesmoke;
+}
+.presentacion h3{
+    font-family: 'Piedra';
+    font-size: 40px;
+    color: orange;
+    margin:2px;
+}
+.gridPie{
+    /* display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    color: white; */
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: black;
+}
+@media (min-width:330px){
+    .gridPie{
+        grid-template-columns: 82% 18%;
+    }
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    /* border:1px solid red; */
+}
+.copyright{
+    margin-right: 8px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    color:white
+}
